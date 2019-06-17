@@ -1,9 +1,9 @@
-<?php 
+<?php
     require "app/pdo.php";
+    require "app/app.php";
 
     $users = $pdo->query("SELECT * FROM users");
     $results = $users->fetchAll();
-    
 ?>
 
 <!DOCTYPE html>
