@@ -1,0 +1,5 @@
+[Fri Jun 14 16:12:50.503520 2019] [core:error] [pid 5822] (13)Permission denied: [client 127.0.0.1:43400] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
+[Fri Jun 14 16:13:07.049988 2019] [core:error] [pid 6701] (13)Permission denied: [client 127.0.0.1:43416] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
+[Fri Jun 14 16:13:08.067472 2019] [core:error] [pid 5820] (13)Permission denied: [client 127.0.0.1:43420] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
+[Fri Jun 14 16:15:00.387852 2019] [core:error] [pid 5819] (13)Permission denied: [client 127.0.0.1:43458] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
+[Fri Jun 14 16:16:36.835522 2019] [core:error] [pid 6700] (13)Permission denied: [client 127.0.0.1:43478] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
