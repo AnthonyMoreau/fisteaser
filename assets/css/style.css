@@ -1,18 +1,42 @@
 body{
     background-color: black;
 }
+
+img {
+    width: 100%;
+}
 h1{
     text-align: center;
     color: rgb(255, 101, 1);
     text-shadow:  0px 2px 2px rgb(254, 237, 9);
+    margin-bottom: 50px;
 
 }
-main{
-    background-image: url(../img/logo3.jpg);
-    background-size: cover;
+h6, .jours p, .heures p, .minutes p, .secondes p {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 200%;
 }
+h6{
+    padding-top: 10px;
+}
+.jours, .heures, .minutes, .minutes, .secondes{
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.164);
+    margin-right: 20px;
+}
+
 .timer p {
     color: whitesmoke;
-    color: black;
+    font-size: 200%;
     text-align: center;
+}
+
+@media only screen and (min-width: 1140px){
+    img{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 37.5%;
+        max-width: 25%;
+    }
 }

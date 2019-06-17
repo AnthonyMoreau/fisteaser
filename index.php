@@ -19,15 +19,39 @@
 </head>
 
 <body>
-    <img src="assets/img/logo2.jpg" style="width: 100%" alt="fisti">
-   <hr>
+    <img src="assets/img/LOGO.png" alt="fisti">
     <main>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    
+
                     <h1>OPENING COMING SOON</h1>
-                   
+
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col jours">
+                                    <h6></h6>
+                                    <p>Jours</p>
+                                </div>
+                                <div class="col heures">
+                                    <h6></h6>
+                                    <p>Heure</p>
+                                </div>
+                                <div class="col minutes">
+                                    <h6></h6>
+                                    <p>Minutes</p>
+                                </div>
+                                <div class="col secondes">
+                                    <h6></h6>
+                                    <p>Secondes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+
                     <div class="col-sm-12">
                         <div class="timer">
                             <p></p>
@@ -40,7 +64,6 @@
     <footer>
 
     </footer>
-    <script src="assets/js/countdown.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
