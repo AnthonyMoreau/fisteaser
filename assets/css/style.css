@@ -1,9 +1,26 @@
 body{
-    background-color: black;
+
+    background-image: url("../img/returntofistiland.jpg");
+    background-size: cover;
+    
+}
+main{
+    margin: 0 20%;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+footer{
+    margin: 0 20%;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+.copyrigth{
+    background-color: rgba(248, 186, 1, 0.822);
+    border-radius: 10px;
+    color: black;
 }
 
 img {
     width: 100%;
+   
 }
 h1{
     text-align: center;
@@ -12,6 +29,7 @@ h1{
     margin-bottom: 50px;
 
 }
+
 h6, .jours p, .heures p, .minutes p, .secondes p {
     text-align: center;
     color: whitesmoke;

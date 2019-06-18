@@ -1,24 +1,44 @@
 <?php
     require "app/app.php";
 
+    $_SESSION['errors'] = [];
+
     if(!empty($_POST)){
         
         if(!empty($_POST['name']) and !empty($_POST['email'])){
-
-            require_once "app/pdo.php";
-
-            $req = $pdo->prepare("INSERT INTO users SET name= ?, mail= ?, news= ?");
-            
             if(empty($_POST['news'])){
-
+                
                 $_POST['news'] = 'null';
             }
+            require_once "app/pdo.php";
+
+
+        if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             
-            $req->execute([$_POST['name'], $_POST['email'], $_POST['news']]);
+            $mail = $pdo->prepare("SELECT * FROM users WHERE mail= ?");
+            $mail->execute([$_POST['email']]);
+            $mails = $mail->fetchAll();
+
+            if(empty($mails)){
+
+                $req = $pdo->prepare("INSERT INTO users SET name= ?, mail= ?, news= ?");
+                $req->execute([$_POST['name'], $_POST['email'], $_POST['news']]);
     
+                $_SESSION['errors'][] = 'Vous avez bien été inscrit';
+
+            } else {
+
+                $_SESSION['errors'][] = "Cet Email est déjà utilisé, veuillez choisir un autre Email !";
+            }
+
         } else {
-    
-            echo('veuillez renplir tous les champs');
+            $_SESSION['errors'][] = "Votre Email n'est pas valide";
+        }
+
+
+        } else {
+
+            $_SESSION['errors'][] = "Veuillez remplir tous les champs";
         }
     }
 ?>
@@ -36,8 +56,8 @@
 </head>
 
 <body>
-    <img src="assets/img/LOGO.png" alt="fisti">
     <main>
+            <img src="assets/img/LOGO.png" alt="fisti">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -80,13 +100,20 @@
                             S'inscrire à la news letter
                             <form action="#" method="POST">
                                 <input type="text" name="name" placeholder="Prénom" required>
-                                <input type="email" name="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email"required>
                                 <label for="news">Recevoir le news letter</label>
                                 <input type="checkbox" name="news" checked>
                                 <p>
                                     <input type="submit" value="Envoyer">
                                 </p>
                             </form>
+                            <span>
+                                <?php
+                                    foreach($_SESSION['errors'] as $error){
+                                        echo $error;
+                                    }
+                                ?>
+                            </span>
                         </div>
                         <div class="col"></div>
                     </div>
@@ -95,6 +122,12 @@
         </div>
     </main>
     <footer>
+        <div class="copyrigth">
+            
+                Copyright &copy; 2019 web15 academy.
+
+           
+        </div>
 
     </footer>
     <script src="assets/js/main.js"></script>
