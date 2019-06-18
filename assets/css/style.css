@@ -36,7 +36,13 @@ h6{
     img{
         margin-top: 50px;
         margin-bottom: 50px;
-        margin-left: 37.5%;
-        max-width: 25%;
+        margin-left: 40%;
+        max-width: 20%;
     }
+}
+input{
+    margin: 10px 0;
+}
+.news{
+    text-align: center;
 }

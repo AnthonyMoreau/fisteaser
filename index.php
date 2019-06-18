@@ -1,9 +1,26 @@
 <?php
-    require "app/pdo.php";
     require "app/app.php";
 
-    $users = $pdo->query("SELECT * FROM users");
-    $results = $users->fetchAll();
+    if(!empty($_POST)){
+        
+        if(!empty($_POST['name']) and !empty($_POST['email'])){
+
+            require_once "app/pdo.php";
+
+            $req = $pdo->prepare("INSERT INTO users SET name= ?, mail= ?, news= ?");
+            
+            if(empty($_POST['news'])){
+
+                $_POST['news'] = 'null';
+            }
+            
+            $req->execute([$_POST['name'], $_POST['email'], $_POST['news']]);
+    
+        } else {
+    
+            echo('veuillez renplir tous les champs');
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +73,22 @@
                         <div class="timer">
                             <p></p>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col news">
+                            S'inscrire à la news letter
+                            <form action="#" method="POST">
+                                <input type="text" name="name" placeholder="Prénom" required>
+                                <input type="email" name="email" placeholder="Email" required>
+                                <label for="news">Recevoir le news letter</label>
+                                <input type="checkbox" name="news" checked>
+                                <p>
+                                    <input type="submit" value="Envoyer">
+                                </p>
+                            </form>
+                        </div>
+                        <div class="col"></div>
                     </div>
                 </div>
             </div>
