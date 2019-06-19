@@ -1,41 +1,28 @@
 <?php
     require "app/app.php";
-
     $_SESSION['errors'] = [];
-
     if(!empty($_POST)){
-        
         if(!empty($_POST['name']) and !empty($_POST['email'])){
             if(empty($_POST['news'])){
                 
                 $_POST['news'] = 'null';
             }
+            //Instance de PDO
             require_once "app/pdo.php";
-
-
         if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            
             $mail = $pdo->prepare("SELECT * FROM users WHERE mail= ?");
             $mail->execute([$_POST['email']]);
             $mails = $mail->fetchAll();
-
             if(empty($mails)){
-
                 $req = $pdo->prepare("INSERT INTO users SET name= ?, mail= ?, news= ?");
                 $req->execute([$_POST['name'], $_POST['email'], $_POST['news']]);
-    
                 $_SESSION['errors'][] = 'Vous avez bien été inscrit';
-
             } else {
-
                 $_SESSION['errors'][] = "Cet Email est déjà utilisé, veuillez choisir un autre Email !";
             }
-
         } else {
             $_SESSION['errors'][] = "Votre Email n'est pas valide";
         }
-
-
         } else {
 
             $_SESSION['errors'][] = "Veuillez remplir tous les champs";
@@ -123,10 +110,7 @@
     </main>
     <footer>
         <div class="copyrigth">
-            
                 Copyright &copy; 2019 web15 academy.
-
-           
         </div>
 
     </footer>
