@@ -48,7 +48,7 @@
             <img src="assets/img/LOGO.png" alt="fisti">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 col-md-12 col-lg-12">
 
                     <h1>OPENING COMING SOON</h1>
 
@@ -77,20 +77,22 @@
                         <div class="col-2"></div>
                     </div>
 
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
                         <div class="timer">
                             <p></p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col"></div>
+                       <div class="col d-none d-md-block "></div>
                         <div class="col news">
-                            S'inscrire à la news letter
+                            <p>S'inscrire à la news letter</p>
+                            
                             <form action="#" method="POST">
                                 <input type="text" name="name" placeholder="Prénom" required>
                                 <input type="email" name="email" placeholder="Email"required>
                                 <label for="news">Recevoir le news letter</label>
                                 <input type="checkbox" name="news" checked>
+
                                 <p>
                                     <input type="submit" value="Envoyer">
                                 </p>
