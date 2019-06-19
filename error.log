@@ -3,3 +3,4 @@
 [Fri Jun 14 16:13:08.067472 2019] [core:error] [pid 5820] (13)Permission denied: [client 127.0.0.1:43420] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
 [Fri Jun 14 16:15:00.387852 2019] [core:error] [pid 5819] (13)Permission denied: [client 127.0.0.1:43458] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
 [Fri Jun 14 16:16:36.835522 2019] [core:error] [pid 6700] (13)Permission denied: [client 127.0.0.1:43478] AH00132: file permissions deny server access: /home/dev1/code/fisteaser/assets/img/logo2.jpg, referer: http://fisteaser/
+[Wed Jun 19 09:25:52.703410 2019] [php7:warn] [pid 2970] [client 127.0.0.1:55552] PHP Warning:  PDOStatement::execute(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'news' in 'field list' in /home/dev2/code/fisteaser/index.php on line 19, referer: http://fisteaser/

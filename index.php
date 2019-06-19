@@ -5,7 +5,7 @@
         if(!empty($_POST['name']) and !empty($_POST['email'])){
             if(empty($_POST['news'])){
                 
-                $_POST['news'] = 'null';
+                $_POST['news'] = 'off';
             }
             //Instance de PDO
             require_once "app/pdo.php";
@@ -14,6 +14,7 @@
             $mail->execute([$_POST['email']]);
             $mails = $mail->fetchAll();
             if(empty($mails)){
+                // si le mail n'est pas utiliser on prepare et on execute la requete pdo
                 $req = $pdo->prepare("INSERT INTO users SET name= ?, mail= ?, news= ?");
                 $req->execute([$_POST['name'], $_POST['email'], $_POST['news']]);
                 $_SESSION['errors'][] = 'Vous avez bien été inscrit';
