@@ -160,5 +160,13 @@ footer{
     margin: 0 15%;
     background-color: rgba(0, 0, 0, 0.822);
 }
+.copyrigth{
+    background-color:rgb(248, 185, 1);
+    color: black;
+    text-align: center;
+}
+.jdg img{
+    margin-bottom: 2px;
+}
 
 }
