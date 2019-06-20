@@ -77,20 +77,20 @@
                         <div class="col-2"></div>
                     </div>
 
-                    <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="col">
                         <div class="timer">
                             <p></p>
                         </div>
                     </div>
-                    <div class="row">
-                       <div class="col d-none d-md-block "></div>
+                    <div class="row"> 
+                       <div class="col d-md-none d-lg-block"></div>
                         <div class="col news">
-                            <p>S'inscrire à la news letter</p>
+                            <p>S'inscrire à la newsletter</p>
                             
                             <form action="#" method="POST">
                                 <input type="text" name="name" placeholder="Prénom" required>
                                 <input type="email" name="email" placeholder="Email"required>
-                                <label for="news">Recevoir le news letter</label>
+                                <label for="news">Recevoir la newsletter</label>
                                 <input type="checkbox" name="news" checked>
 
                                 <p>
@@ -105,16 +105,23 @@
                                 ?>
                             </span>
                         </div>
-                        <div class="col"></div>
+                        <div class="col d-md-none d-lg-block"></div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>
+        <div class="jdg">
+            <a href="https://www.youtube.com/user/joueurdugrenier"><img src="assets/img/bando_jdg.png" alt="jdg"></a>
+            
+        </div>
         <div class="copyrigth">
                 Copyright &copy; 2019 web15 academy.
-        </div>
+                <p>
+               <a href="https://www.cnil.fr/fr/rgpd-par-ou-commencer">Règlement général sur la protection des données</a> 
+               </p>
+            </div>
 
     </footer>
     <script src="assets/js/main.js"></script>

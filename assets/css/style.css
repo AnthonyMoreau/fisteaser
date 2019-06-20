@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+
 body{
 
     background-image: url("../img/planet-coaster3.jpg");
     background-size: cover;
     
 }
-
 main{
     
     margin: 0 25%;
@@ -16,9 +18,12 @@ footer{
 }
 .copyrigth{
     background-color:rgb(248, 185, 1);
-    border-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     color: black;
+    text-align: center;
 }
+
 
 img {
     width: 100%;
@@ -29,6 +34,8 @@ h1{
     color: rgb(255, 101, 1);
     text-shadow:  0px 2px 2px rgb(248, 185, 1);
     margin-bottom: 50px;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
     
 
 }
@@ -45,8 +52,9 @@ h6{
     border-radius: 10px;
     background-color: rgba(128, 128, 128, 0.329);
     margin-right: 20px;
+
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .timer p {
@@ -54,6 +62,7 @@ h6{
     font-size: 200%;
     text-align: center;
 }
+
 
 @media only screen and (min-width: 1140px){
     img{
@@ -71,7 +80,9 @@ input{
 .news{
     text-align: center;
     color:rgb(248, 185, 1);
+    
 }
+
 
 
 form p input{
@@ -87,32 +98,67 @@ form p input{
 p input:hover{
     background-color: rgb(255, 101, 1);
 }
-@media only screen and (max-width: 700px) and (min-width:540px){
+@media only screen and(max-width: 700px) and (min-width:540px){
 h1{
     font-size: 200%;
 }
 
 .news{
-    padding-right: 20px;
-    padding-left: 020px;
+    padding-right: 0;
+    padding-left: 0;
 
 }
 form input{
     text-align: center;
-
+    
+    }
+    h6, .jours p, .heures p, .minutes p, .secondes p {
+        text-align: center;
+        color: whitesmoke;
+        font-size: 100%;
+        }
+        .jours, .heures, .minutes, .minutes, .secondes{
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.329);
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+           
+        }
 }
+@media screen and (max-width:540px){
+   h1{
+       font-size: 200%;
+       margin-bottom: 20px;
+   }
+   h6, .jours p, .heures p, .minutes p, .secondes p {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 120%;
 
-@media only screen and (max-width: 540px){
-    h1{
-        font-size: 200%;
     }
-    .timer p{
-      text-align: center;
+    .jours, .heures, .minutes, .minutes, .secondes{
+        border-radius: 10px;
+        background-color: rgba(128, 128, 128, 0.329);
+        margin-right: 0;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border: 1px ridge  black;
     }
+    
     input{
-        margin: 10px 0;
+        padding-left: 3px;
+        padding-right: 15px;
+        font-size: 50%
+}
+main{
+    
+    margin: 0 15%;
+    background-color: rgba(0, 0, 0, 0.822);
+}
+footer{
+    margin: 0 15%;
+    background-color: rgba(0, 0, 0, 0.822);
 }
 
-    }
-
-
+}
